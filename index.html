@@ -25,7 +25,6 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            /* Fondo con degradado suave en tonos grises oscuros y acentos morados */
             background: linear-gradient(135deg, #111016 0%, #1c1824 50%, #13111a 100%);
             background-attachment: fixed;
             color: var(--text-main);
@@ -53,11 +52,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 70px;
+            height: 60px;
         }
 
         .logo {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 800;
             background: linear-gradient(135deg, #f472b6, #a855f7);
             -webkit-background-clip: text;
@@ -69,14 +68,14 @@
             display: flex;
             list-style: none;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: color 0.3s;
         }
 
@@ -86,30 +85,30 @@
 
         /* SECCIÓN HERO / INICIO */
         .hero {
-            padding: 90px 0 50px;
+            padding: 45px 0 30px;
             text-align: center;
         }
 
         .hero-content h1 {
-            font-size: 2.7rem;
+            font-size: 2.1rem;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: var(--text-main);
         }
 
         .hero-content p {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             color: var(--text-muted);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .badge-info {
             display: inline-block;
             background: rgba(168, 85, 247, 0.15);
             color: #d8b4fe;
-            padding: 6px 16px;
+            padding: 4px 14px;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 600;
             margin-bottom: 15px;
             border: 1px solid rgba(168, 85, 247, 0.3);
@@ -118,15 +117,16 @@
         .hero-buttons {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: var(--radius);
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.9rem;
             display: inline-block;
             transition: transform 0.2s, background 0.3s;
         }
@@ -153,37 +153,38 @@
 
         /* SECCIÓN GENERAL */
         section {
-            padding: 50px 0;
+            padding: 35px 0;
         }
 
         .section-title {
             text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
             font-weight: 800;
         }
 
-        /* SERVICIOS */
+        /* SOBRE MÍ */
         .card-random {
             background-color: var(--bg-card);
             backdrop-filter: blur(10px);
-            padding: 40px 30px;
+            padding: 25px 20px;
             border-radius: var(--radius);
             border: 1px solid rgba(75, 85, 99, 0.3);
             text-align: center;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
         }
 
         .card-random p {
-            font-size: 1.2rem;
-            font-style: italic;
+            font-size: 0.95rem;
+            font-weight: 600;
             color: var(--text-main);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            line-height: 1.6;
         }
 
         .card-random span {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -192,14 +193,14 @@
         /* REDES SOCIALES */
         .grid-social {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
         }
 
         .social-card {
             background-color: var(--bg-card);
             backdrop-filter: blur(10px);
-            padding: 24px;
+            padding: 20px;
             border-radius: var(--radius);
             border: 1px solid rgba(75, 85, 99, 0.3);
             text-align: center;
@@ -215,25 +216,32 @@
         }
 
         .social-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
+            font-size: 1rem;
+            margin-bottom: 6px;
             color: #f472b6;
         }
 
         .social-card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             word-break: break-all;
+        }
+
+        .social-card .note {
+            font-size: 0.75rem;
+            color: #a855f7;
+            margin-top: 5px;
+            font-weight: 600;
         }
 
         /* FOOTER */
         .footer {
             border-top: 1px solid rgba(75, 85, 99, 0.3);
-            padding: 30px 0;
+            padding: 25px 0;
             text-align: center;
             color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-top: 40px;
+            font-size: 0.85rem;
+            margin-top: 30px;
             background-color: rgba(17, 16, 22, 0.85);
             backdrop-filter: blur(10px);
         }
@@ -248,7 +256,7 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
                     <li><a href="#contacto">Contactos</a></li>
                 </ul>
             </nav>
@@ -258,23 +266,23 @@
     <!-- Sección Inicio -->
     <section id="inicio" class="hero">
         <div class="container hero-content">
-            <div class="badge-info">Desde el 2005 armando un desmadre</div>
-            <h1>Hola, soy Valdelrey77</h1>
-            <p>Bienvenido a mi espacio web personal en internet.</p>
+            <div class="badge-info">Valdelrey77 • 2005</div>
+            <h1>Hola, soy Valeria:)</h1>
+            <p>Bienvenido/a a mi espacio web personal.</p>
             <div class="hero-buttons">
                 <a href="#contacto" class="btn btn-primary">Ver Redes y Contactos</a>
-                <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
+                <a href="#sobre-mi" class="btn btn-secondary">Sobre mí</a>
             </div>
         </div>
     </section>
 
-    <!-- Sección Servicios -->
-    <section id="servicios">
+    <!-- Sección Sobre mí -->
+    <section id="sobre-mi">
         <div class="container">
-            <h2 class="section-title">Servicios</h2>
+            <h2 class="section-title">Sobre mí</h2>
             <div class="card-random">
-                <p>"Pues no ofresco nada, solo ando probando está cosa JAJAAJAK"</p>
-                <span>Servicio oficial 100% garantizado</span>
+                <p>Aquí no hay mucho que ver, solo es un rincón en internet que armé porque no tenía nada mejor que hacer y quería ver cómo quedaba. KABSAKSJAKA, pásale, revisa los enlaces, stalkea lo que tengas que stalkear y listo. Al final del día, solo es internet. 💜</p>
+                <span>Información 100% verificada</span>
             </div>
         </div>
     </section>
@@ -295,10 +303,11 @@
                 <h3>Telegram</h3>
                 <p>@valdelrey777</p>
             </a>
-            <a href="tel:+17869805932" class="social-card">
+            <div class="social-card">
                 <h3>Teléfono</h3>
-                <p>+1 786-980-5932</p>
-            </a>
+                <p>***-***-5932</p>
+                <p class="note">Solo pídemelo, tampoco es que voy a poner mi número aquí chismos@ KAJAKSAJ</p>
+            </div>
             <a href="mailto:valerialopezm77@gmail.com" class="social-card" style="grid-column: 1 / -1; max-width: 400px; margin: 0 auto; width: 100%;">
                 <h3>Correo Electrónico</h3>
                 <p>valerialopezm77@gmail.com</p>
