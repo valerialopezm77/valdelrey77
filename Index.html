@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valdelrey77 - Perfil Oficial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #a855f7;
+            --primary-hover: #9333ea;
+            --bg-card: #1e1b24;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #111016 0%, #1c1824 50%, #13111a 100%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* NAVEGACIÓN */
+        .navbar {
+            background-color: rgba(17, 16, 22, 0.85);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f472b6, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        /* SECCIÓN HERO / INICIO */
+        .hero {
+            padding: 45px 0 30px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .hero-content p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .badge-info {
+            display: inline-block;
+            background: rgba(168, 85, 247, 0.15);
+            color: #d8b4fe;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(75, 85, 99, 0.5);
+            color: var(--text-main);
+            background-color: var(--bg-card);
+        }
+
+        .btn-secondary:hover {
+            background-color: #272332;
+        }
+
+        /* SECCIÓN GENERAL */
+        section {
+            padding: 35px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        /* SOBRE MÍ */
+        .card-random {
+            background-color: var(--bg-card);
+            backdrop-filter: blur(10px);
+            padding: 25px 20px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(75, 85, 99, 0.3);
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .card-random p {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .card-random span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* REDES SOCIALES */
+        .grid-social {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .social-card {
+            background-color: var(--bg-card);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(75, 85, 99, 0.3);
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: transform 0.3s, border-color 0.3s;
+            display: block;
+        }
+
+        .social-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-color);
+        }
+
+        .social-card h3 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+            color: #f472b6;
+        }
+
+        .social-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            word-break: break-all;
+        }
+
+        .social-card .note {
+            font-size: 0.75rem;
+            color: #a855f7;
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+        .footer {
+            border-top: 1px solid rgba(75, 85, 99, 0.3);
+            padding: 25px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 30px;
+            background-color: rgba(17, 16, 22, 0.85);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Valdelrey77</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#contacto">Contactos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <div class="badge-info">Valdelrey77 • 2005</div>
+            <h1>Hola, soy Valeria:)</h1>
+            <p>Bienvenido/a a mi espacio web personal.</p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn btn-primary">Ver Redes y Contactos</a>
+                <a href="#sobre-mi" class="btn btn-secondary">Sobre mí</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre mí -->
+    <section id="sobre-mi">
+        <div class="container">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="card-random">
+                <p>Aquí no hay mucho que ver, solo es un rincón en internet que armé porque no tenía nada mejor que hacer y quería ver cómo quedaba. KABSAKSJAKA, pásale, revisa los enlaces, stalkea lo que tengas que stalkear y listo. Al final del día, solo es internet. 💜</p>
+                <span>Información 100% verificada</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contactos / Redes Sociales -->
+    <section id="contacto" class="container">
+        <h2 class="section-title">Redes y Contactos de Valeria</h2>
+        <div class="grid-social">
+            <a href="https://instagram.com/valdelrey77" target="_blank" class="social-card">
+                <h3>Instagram</h3>
+                <p>@valdelrey77</p>
+            </a>
+            <a href="https://tiktok.com/@valdelrey77" target="_blank" class="social-card">
+                <h3>TikTok</h3>
+                <p>@valdelrey77</p>
+            </a>
+            <a href="https://t.me/valdelrey777" target="_blank" class="social-card">
+                <h3>Telegram</h3>
+                <p>@valdelrey777</p>
+            </a>
+            <div class="social-card">
+                <h3>Teléfono</h3>
+                <p>***-***-5932</p>
+                <p class="note">Solo pídemelo, tampoco es que voy a poner mi número aquí chismos@ KAJAKSAJ</p>
+            </div>
+            <a href="mailto:valerialopezm77@gmail.com" class="social-card" style="grid-column: 1 / -1; max-width: 400px; margin: 0 auto; width: 100%;">
+                <h3>Correo Electrónico</h3>
+                <p>valerialopezm77@gmail.com</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Valdelrey77. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
