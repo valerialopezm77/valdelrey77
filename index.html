@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valeria - Perfil Oficial</title>
+    <title>Valdelrey77 - Perfil Oficial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -11,10 +11,9 @@
         :root {
             --primary-color: #a855f7;
             --primary-hover: #9333ea;
-            --bg-dark: #0f172a;
-            --bg-card: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --bg-card: #1e1b24;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
             --radius: 16px;
         }
 
@@ -26,9 +25,12 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
+            /* Fondo con degradado suave en tonos grises oscuros y acentos morados */
+            background: linear-gradient(135deg, #111016 0%, #1c1824 50%, #13111a 100%);
+            background-attachment: fixed;
             color: var(--text-main);
             line-height: 1.6;
+            min-height: 100vh;
         }
 
         .container {
@@ -39,12 +41,12 @@
 
         /* NAVEGACIÓN */
         .navbar {
-            background-color: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(8px);
+            background-color: rgba(17, 16, 22, 0.85);
+            backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid #334155;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.15);
         }
 
         .nav-container {
@@ -84,12 +86,12 @@
 
         /* SECCIÓN HERO / INICIO */
         .hero {
-            padding: 80px 0 40px;
+            padding: 90px 0 50px;
             text-align: center;
         }
 
         .hero-content h1 {
-            font-size: 2.5rem;
+            font-size: 2.7rem;
             font-weight: 800;
             margin-bottom: 15px;
             color: var(--text-main);
@@ -140,13 +142,13 @@
         }
 
         .btn-secondary {
-            border: 1px solid #334155;
+            border: 1px solid rgba(75, 85, 99, 0.5);
             color: var(--text-main);
             background-color: var(--bg-card);
         }
 
         .btn-secondary:hover {
-            background-color: #334155;
+            background-color: #272332;
         }
 
         /* SECCIÓN GENERAL */
@@ -161,12 +163,13 @@
             font-weight: 800;
         }
 
-        /* SERVICIOS / TEXTO RANDOM */
+        /* SERVICIOS */
         .card-random {
             background-color: var(--bg-card);
+            backdrop-filter: blur(10px);
             padding: 40px 30px;
             border-radius: var(--radius);
-            border: 1px solid #334155;
+            border: 1px solid rgba(75, 85, 99, 0.3);
             text-align: center;
             max-width: 600px;
             margin: 0 auto;
@@ -195,9 +198,10 @@
 
         .social-card {
             background-color: var(--bg-card);
+            backdrop-filter: blur(10px);
             padding: 24px;
             border-radius: var(--radius);
-            border: 1px solid #334155;
+            border: 1px solid rgba(75, 85, 99, 0.3);
             text-align: center;
             text-decoration: none;
             color: var(--text-main);
@@ -224,12 +228,14 @@
 
         /* FOOTER */
         .footer {
-            border-top: 1px solid #334155;
+            border-top: 1px solid rgba(75, 85, 99, 0.3);
             padding: 30px 0;
             text-align: center;
             color: var(--text-muted);
             font-size: 0.9rem;
             margin-top: 40px;
+            background-color: rgba(17, 16, 22, 0.85);
+            backdrop-filter: blur(10px);
         }
     </style>
 </head>
@@ -238,12 +244,12 @@
     <!-- Navegación -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">valdelrey77</a>
+            <a href="#" class="logo">Valdelrey77</a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#contacto">Contactos</a></li>
                 </ul>
             </nav>
         </div>
@@ -252,11 +258,11 @@
     <!-- Sección Inicio -->
     <section id="inicio" class="hero">
         <div class="container hero-content">
-            <div class="badge-info">Año 2005 • 21 Años</div>
-            <h1>Hola, soy valdelrey77</h1>
+            <div class="badge-info">Desde el 2005 armando un desmadre</div>
+            <h1>Hola, soy Valdelrey77</h1>
             <p>Bienvenido a mi espacio web personal en internet.</p>
             <div class="hero-buttons">
-                <a href="#contacto" class="btn btn-primary">Ver Redes y Contacto</a>
+                <a href="#contacto" class="btn btn-primary">Ver Redes y Contactos</a>
                 <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
             </div>
         </div>
@@ -273,9 +279,9 @@
         </div>
     </section>
 
-    <!-- Sección Contacto / Redes Sociales -->
+    <!-- Sección Contactos / Redes Sociales -->
     <section id="contacto" class="container">
-        <h2 class="section-title">Redes y Contacto de Valeria</h2>
+        <h2 class="section-title">Redes y Contactos de Valeria</h2>
         <div class="grid-social">
             <a href="https://instagram.com/valdelrey77" target="_blank" class="social-card">
                 <h3>Instagram</h3>
@@ -303,7 +309,7 @@
     <!-- Pie de página -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 valdelrey77. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Valdelrey77. Todos los derechos reservados.</p>
         </div>
     </footer>
 
